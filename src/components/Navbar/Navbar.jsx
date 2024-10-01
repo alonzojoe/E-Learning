@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { IoMdMenu } from "react-icons/io";
 
 const menus = [
@@ -32,7 +33,11 @@ const menus = [
 const Navbar = () => {
   return (
     <nav className="relative z-20">
-      <div className="container py-10 flex justify-between items-center">
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="container py-10 flex justify-between items-center"
+      >
         {/* App Logo */}
         <div>
           <h1 className="font-bold text-2xl">The E-Learning</h1>
@@ -58,7 +63,7 @@ const Navbar = () => {
         <div className="lg:hidden">
           <IoMdMenu className="text-4xl" />
         </div>
-      </div>
+      </motion.div>
     </nav>
   );
 };
