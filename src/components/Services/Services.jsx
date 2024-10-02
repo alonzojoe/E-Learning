@@ -1,5 +1,5 @@
-import { delay } from "framer-motion";
 import React from "react";
+import { motion } from "framer-motion";
 import { RiComputerLine } from "react-icons/ri";
 import { CiMobile3 } from "react-icons/ci";
 import { TbWorldWww } from "react-icons/tb";
@@ -51,6 +51,24 @@ const services = [
   },
 ];
 
+const slideLeft = (delay) => {
+  return {
+    initial: {
+      opacity: 0,
+      x: 50,
+    },
+    animate: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.3,
+        delay,
+        ease: "easeInOut",
+      },
+    },
+  };
+};
+
 const Services = () => {
   return (
     <section className="bg-white">
@@ -60,7 +78,11 @@ const Services = () => {
         </h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8">
           {services.map((service) => (
-            <div
+            <motion.div
+              variants={slideLeft(service.delay)}
+              initial="initial"
+              whileInView={"animate"}
+              viewport={{ once: true }}
               className="bg-[#f4f4f4] rounded-2xl flex flex-col items-center gap-4 p-4 py-7 hover:shadow-2xl hover:bg-white hover:scale-110 duration-300"
               key={service.id}
             >
@@ -68,7 +90,7 @@ const Services = () => {
               <h1 className="text-lg font-semibold text-center px-3">
                 {service.title}
               </h1>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
