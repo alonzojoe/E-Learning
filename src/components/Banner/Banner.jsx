@@ -10,19 +10,61 @@ const Banner = () => {
     <section>
       <div className="container py-14 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-8 space-y-6 md:space-y-0">
         {/* Banner Image */}
-        <div className="flex justify-center items-center border-solid border-[1px] border-red-600 rounded-md">
-          <img
+        <div className="flex justify-center items-center ">
+          <motion.img
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            viewport={{ once: true }}
             className="w-[350px] md:max-w-[450px] object-cover drop-shadow"
             src={BannerImg}
             alt="banner-image"
           />
         </div>
         {/* Banner Text */}
-        <div className="flex flex-col justify-center border-solid border-[1px] border-green-600 rounded-md">
+        <div className="flex flex-col justify-center">
           <div className="text-center md:text-left space-y-12">
-            <h1 className="text-3xl md:text-4xl font-bold !leading-snug">
+            <motion.h1
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-3xl md:text-4xl font-bold !leading-snug"
+            >
               The World&apos;s Leading Online Platform
-            </h1>
+            </motion.h1>
+            <div className="flex flex-col gap-6">
+              <motion.div
+                variants={FadeUp(0.2)}
+                initial="initial"
+                whileInView={"animate"}
+                viewport={{ once: true }}
+                className="flex items-center gap-2 p-6 bg-[#eceaea] rounded-2xl hover:bg-white hover:shadow-2xl"
+              >
+                <FaBookReader className="text-2x" />
+                <p className="text-lg">10,000+ Courses</p>
+              </motion.div>
+              <motion.div
+                variants={FadeUp(0.4)}
+                initial="initial"
+                whileInView={"animate"}
+                viewport={{ once: true }}
+                className="flex items-center gap-2 p-6 bg-[#eceaea] rounded-2xl hover:bg-white hover:shadow-2xl"
+              >
+                <GrUserExpert className="text-2x" />
+                <p className="text-lg">Expert Instruction</p>
+              </motion.div>
+              <motion.div
+                variants={FadeUp(0.6)}
+                initial="initial"
+                whileInView={"animate"}
+                viewport={{ once: true }}
+                className="flex items-center gap-2 p-6 bg-[#eceaea] rounded-2xl hover:bg-white hover:shadow-2xl"
+              >
+                <MdOutlineAccessTime className="text-2x" />
+                <p className="text-lg">Lifetime Access</p>
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>
