@@ -23,7 +23,7 @@ const services = [
   },
   {
     id: 3,
-    title: "Softwaere development",
+    title: "Software development",
     link: "#",
     icon: <RiComputerLine />,
     delay: 0.4,
