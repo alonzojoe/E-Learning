@@ -64,7 +64,6 @@ const Banner = () => {
                 <MdOutlineAccessTime className="text-2xl" />
                 <p className="text-lg">Lifetime Access</p>
               </motion.div>
-              <div>s</div>
             </div>
           </div>
         </div>
