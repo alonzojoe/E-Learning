@@ -41,7 +41,7 @@ const Banner = () => {
                 viewport={{ once: true }}
                 className="flex items-center gap-2 p-6 bg-[#eceaea] rounded-2xl hover:bg-white hover:shadow-2xl"
               >
-                <FaBookReader className="text-2x" />
+                <FaBookReader className="text-2xl" />
                 <p className="text-lg">10,000+ Courses</p>
               </motion.div>
               <motion.div
@@ -51,7 +51,7 @@ const Banner = () => {
                 viewport={{ once: true }}
                 className="flex items-center gap-2 p-6 bg-[#eceaea] rounded-2xl hover:bg-white hover:shadow-2xl"
               >
-                <GrUserExpert className="text-2x" />
+                <GrUserExpert className="text-2xl" />
                 <p className="text-lg">Expert Instruction</p>
               </motion.div>
               <motion.div
@@ -61,7 +61,7 @@ const Banner = () => {
                 viewport={{ once: true }}
                 className="flex items-center gap-2 p-6 bg-[#eceaea] rounded-2xl hover:bg-white hover:shadow-2xl"
               >
-                <MdOutlineAccessTime className="text-2x" />
+                <MdOutlineAccessTime className="text-2xl" />
                 <p className="text-lg">Lifetime Access</p>
               </motion.div>
             </div>
