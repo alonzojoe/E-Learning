@@ -12,8 +12,18 @@ const bgStyle = {
 const Subscribers = () => {
   return (
     <section className="bg-[#f7f7f7]">
-      <div className="container py-28 md:py-32" style={bgStyle}>
-        <div className="flex flex-col justify-center">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className="container py-24 md:py-48"
+        style={bgStyle}
+      >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          className="flex flex-col justify-center"
+        >
           <div className="text-center space-y-4 lg:max-w-[430px] mx-auto border-solid border-[1px]">
             <h1 className="text-4xl font-bold !leading-snug">
               450K+ Students are learning
@@ -32,8 +42,8 @@ const Subscribers = () => {
               <FaBell className="group-hover:animate-bounce group-hover:text-lg duration-200" />
             </a>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
