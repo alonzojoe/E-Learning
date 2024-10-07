@@ -5,6 +5,7 @@ import Services from "./components/Services/Services";
 import Banner from "./components/Banner/Banner";
 import Subscribers from "./components/Subscribers/Subscribers";
 import Community from "./components/Banner/Community";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Banner />
       <Subscribers />
       <Community />
+      <Footer />
     </main>
   );
 };
