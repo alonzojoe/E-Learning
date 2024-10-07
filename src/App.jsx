@@ -4,7 +4,6 @@ import Hero from "./components/Hero/Hero";
 import Services from "./components/Services/Services";
 import Banner from "./components/Banner/Banner";
 import Subscribers from "./components/Subscribers/Subscribers";
-import Community from "./components/Banner/Community";
 
 const App = () => {
   return (
@@ -14,7 +13,6 @@ const App = () => {
       <Services />
       <Banner />
       <Subscribers />
-      <Community />
     </main>
   );
 };
