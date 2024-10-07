@@ -6,7 +6,11 @@ import { motion } from "framer-motion";
 const Footer = () => {
   return (
     <footer className="py-28 bg-[#eceaea]">
-      <div className="container">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="container"
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 md:gap-4">
           {/* Section 1 */}
           <div className="space-y-4 max-w-[300px]">
@@ -88,7 +92,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 };
