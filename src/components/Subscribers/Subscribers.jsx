@@ -24,7 +24,7 @@ const Subscribers = () => {
           transition={{ duration: 0.6, ease: "easeInOut" }}
           className="flex flex-col justify-center"
         >
-          <div className="text-center space-y-4 lg:max-w-[430px] mx-auto border-solid border-[1px]">
+          <div className="text-center space-y-4 lg:max-w-[430px] mx-auto">
             <h1 className="text-4xl font-bold !leading-snug">
               450K+ Students are learning
             </h1>
